@@ -13,3 +13,4 @@ of an IDE, and can be more resiliant to network disruptions.
 1. Backend using webdav - either https://godoc.org/golang.org/x/net/webdav or https://www.npmjs.com/package/webdav-server
 2. Frontend using ACE editor (https://github.com/ajaxorg/ace-builds/) and probably a webdav library (https://www.npmjs.com/package/webdav)
 3. We'll wrap the frontend with some simple UI framework like https://getmdl.io or maybe something more soffisticated like Reactjs
+4. We might consider using https://github.com/mjibson/esc in order to serve the 'static' files.
