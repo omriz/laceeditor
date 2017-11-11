@@ -13,4 +13,20 @@ of an IDE, and can be more resiliant to network disruptions.
 1. Backend using webdav - either https://godoc.org/golang.org/x/net/webdav or https://www.npmjs.com/package/webdav-server
 2. Frontend using ACE editor (https://github.com/ajaxorg/ace-builds/) and probably a webdav library (https://www.npmjs.com/package/webdav)
 3. We'll wrap the frontend with some simple UI framework like https://getmdl.io or maybe something more soffisticated like Reactjs
-4. We might consider using https://github.com/mjibson/esc in order to serve the 'static' files.
+4. Using https://github.com/GeertJohan/go.rice to serve static files. We can use a go:generate command to compile our static files beforehand.
+
+## How to build/install
+Assming the standard go project structure:
+```bash
+# Fetching go.rice
+go get github.com/GeertJohan/go.rice
+go get github.com/GeertJohan/go.rice/rice
+# Fetching laceeditor
+go get github.com/omriz/laceeditor
+# Building static sources
+cd src/github.com/omriz/laceeditor
+../../../../bin/rice embed-go
+cd -
+# Installing LAce
+go install github.com/omriz/laceeditor
+```

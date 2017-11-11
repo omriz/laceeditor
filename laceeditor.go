@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"github.com/GeertJohan/go.rice"
 	"golang.org/x/net/webdav"
 	"net/http"
 )
@@ -23,6 +24,8 @@ func main() {
 		Logger:     nil,
 	}
 	http.HandleFunc(davUrl, dav.ServeHTTP)
-	http.HandleFunc("/func/", helloHandler)
+	http.Handle("/", http.FileServer(rice.MustFindBox("static").HTTPBox()))
+	// In order to bind to localhost we need to do
+	// http.ListenAndServe("localhost:8080", nil)
 	http.ListenAndServe(":8080", nil)
 }
