@@ -10,7 +10,7 @@ import (
 
 // Assuming you did go get github.com/GeertJohan/go.rice/rice
 // and ./bin/rice is in your PATH
-//go:generate rice embed-go
+//go:generate $GOPATH/bin/rice embed-go
 
 var davDir = flag.String("dav_dir", "/tmp", "Directory where the files will be accessible")
 
