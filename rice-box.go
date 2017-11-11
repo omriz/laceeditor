@@ -10,8 +10,8 @@ func init() {
 	// define files
 	file2 := &embedded.EmbeddedFile{
 		Filename:    "index.html",
-		FileModTime: time.Unix(1510432603, 0),
-		Content:     string("<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>HTML5 : Hello World Example</title>\n    </head>\n    <body>\n        <h1>Hello World</h1>\n        <p>\n            Hey therex!\n        </p>\n    </body>\n</html>"),
+		FileModTime: time.Unix(1510432665, 0),
+		Content:     string("<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"utf-8\">\n        <title>HTML5 : Hello World Example</title>\n    </head>\n    <body>\n        <h1>Hello World</h1>\n        <p>\n            Hey there!\n        </p>\n    </body>\n</html>"),
 	}
 
 	// define dirs

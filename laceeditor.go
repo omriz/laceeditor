@@ -8,11 +8,11 @@ import (
 	"net/http"
 )
 
-var davDir = flag.String("dav_dir", "/tmp", "Directory where the files will be accessible")
+// Assuming you did go get github.com/GeertJohan/go.rice/rice
+// and ./bin/rice is in your PATH
+//go:generate rice embed-go
 
-func helloHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hi there, I love %s!", r.URL.Path[1:])
-}
+var davDir = flag.String("dav_dir", "/tmp", "Directory where the files will be accessible")
 
 func main() {
 	flag.Parse()

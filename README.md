@@ -24,9 +24,7 @@ go get github.com/GeertJohan/go.rice/rice
 # Fetching laceeditor
 go get github.com/omriz/laceeditor
 # Building static sources
-cd src/github.com/omriz/laceeditor
-../../../../bin/rice embed-go
-cd -
+go generate github.com/omriz/laceeditor
 # Installing LAce
 go install github.com/omriz/laceeditor
 ```
