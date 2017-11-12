@@ -28,3 +28,7 @@ go generate github.com/omriz/laceeditor
 # Installing LAce
 go install github.com/omriz/laceeditor
 ```
+
+## Appifying
+In theory, if we want to make this into a "desktop" app we could wrap this in a small script that will later launch
+`chrome --app=http://localhost:8080`
